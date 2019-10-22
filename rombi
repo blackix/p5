@@ -1,0 +1,52 @@
+let x = 100;
+let y = 200;
+
+function setup() {
+  createCanvas(800, 400);
+  background(255);
+}
+
+function draw() {
+  for (let i = 0; i < 4; i++) {
+    strokeWeight(3);
+    lineaA();
+    lineaB();
+    lineaC();
+    lineaD();
+    x += 100;
+  }
+  //console.log(lineAlfa);
+}
+
+function lineaA() {
+  alfa();
+  stroke(lineAlfa);
+  line(x, y, x + 25, y - 50);
+}
+
+function lineaB() {
+  alfa();
+  stroke(lineAlfa);
+  line(x, y, x + 25, y + 50);
+}
+
+function lineaC() {
+  alfa();
+  stroke(lineAlfa);
+  line(x + 25, y - 50, x + 50, y);
+}
+
+function lineaD() {
+  alfa();
+  stroke(lineAlfa);
+  line(x + 25, y + 50, x + 50, y);
+}
+
+function alfa() {
+  let p = random(-1, 1);
+  if (p < 0) {
+    lineAlfa = 0;
+  } else {
+    lineAlfa = 255;
+  }
+}
